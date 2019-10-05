@@ -39,11 +39,40 @@ En sortie: [
   'Tofu is suitable for vegetarians',
   'Chick Pea is suitable for vegetarians'
 ]
+*/
 
- */
+const foods = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  } 
+]
 
-function getFoodCategories(foods) {
+const getFoodCategories = (foods) => {
+  const foodItem = foods.map (foods => {
+    if (foods ["isVegetarian"] === true) {
+      return `${foods["food"]} is suitable for vegetarians`; 
+    } else {
+      return `${foods["food"]} is not suitable for vegetarians`; 
+    }  
+  })
+return foodItem;
 }
+
+
+console.log(getFoodCategories(foods));
 
 
 

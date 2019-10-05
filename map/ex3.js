@@ -59,8 +59,72 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
+
+movies = [
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60
+  }
+]
+
+
+// const getMoviesFreshness = (movies) => {
+//   const rating = movies.map (movies => {
+//     if (movies ["rating"] < 60) {
+//       return movies["label"] = 'rotten'; 
+//     } if (movies ["rating"] > 75) {
+//       return movies["label"] = 'certified fresh'; 
+//     } else {
+//       return movies["label"] = 'fresh'; 
+//     }  
+//   })
+// return rating;
+// }
+
+
+const getMoviesFreshness = (movies) => {
+  movies.map (movies => {
+    if (movies ["rating"] < 60) {
+      return movies["label"] = 'rotten'; 
+    } if (movies ["rating"] > 75) {
+      return movies["label"] = 'certified fresh'; 
+    } else {
+      return movies["label"] = 'fresh'; 
+    }  
+  })
+return movies;
 }
+
+
+console.log(getMoviesFreshness(movies));
+
+// function getMoviesFreshness(movies) {
+//   movies.map(function(movies) {
+//   if(movies['rating'] < 60){
+//   return movies['label'] = 'rotten';
+//   }
+//   if(movies['rating'] >= 60 && movies['rating'] <= 75){
+//   return movies['label'] = 'fresh';
+//   }
+//   if(movies['rating'] > 75){
+//   return movies['label'] = 'certified fresh';
+//   }
+//   });
+//   return movies;
+//   }
+
 
 
 

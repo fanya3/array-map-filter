@@ -23,8 +23,24 @@ Sortie attendue:
 
  */
 
-function keepStarks(names) {
+
+names = [
+  'Bran Stark',
+  'Cersei Lannister',
+  'Sandor Clegane',
+  'Arya Stark',
+  'Yara Greyjoy',
+  'Sansa Stark'
+]
+
+const keepStarks = (names) => { 
+  const starkNames = names.filter (string => {
+    return  string.endsWith("Stark");
+  })
+  return starkNames
 }
+console.log(keepStarks(names));
+
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
